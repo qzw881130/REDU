@@ -21,8 +21,8 @@ src
         └── counter.js
 ```
 
+#### src/store/index.js
 ```js
-#src/store/index.js
 import { configureStore }  from '@reduxjs/toolkit';
 import counter from './modules/counter';
 
@@ -33,8 +33,8 @@ export default configureStore({
 });
 ```
 
+#### src/store/modules/counter.js
 ```js
-#src/store/modules/counter.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const counter = createSlice({
@@ -77,8 +77,8 @@ export const subAsync = (payload) => {
 export default counter.reducer;
 ```
 
+#### src/App.js
 ```js
-#src/App.js
 import { useDispatch, useSelector } from 'react-redux';
 import { add, subAsync, push, del } from './store/modules/counter';
 
